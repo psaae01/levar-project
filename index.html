@@ -28,7 +28,12 @@
   .badge { font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
   .done { background: #dcfce7; color: #166534; }
   .wip  { background: #fef9c3; color: #854d0e; }
-  .sub-label { font-size: 10px; font-weight: 700; color: #bbb; letter-spacing: 1px; text-transform: uppercase; padding: 8px 18px 4px; background: #fafaf8; border-bottom: 1px solid #f0efe9; }
+  .plan { background: #ede9fe; color: #5b21b6; }
+  .sub-label { font-size: 10px; font-weight: 700; color: #bbb; letter-spacing: 1px; text-transform: uppercase; padding: 8px 18px 6px; background: #fafaf8; border-bottom: 1px solid #f0efe9; }
+  .time-chip { font-size: 11px; color: #555; background: #f5f4f0; border-radius: 20px; padding: 3px 10px; white-space: nowrap; display: inline-flex; align-items: center; gap: 5px; }
+  .time-old { color: #aaa; text-decoration: line-through; }
+  .time-arrow { color: #bbb; font-size: 10px; }
+  .time-new { color: #1a7a4a; font-weight: 700; }
   .notice { background: #fffbeb; border-radius: 10px; border: 1px solid #fde68a; padding: 12px 16px; font-size: 12px; color: #92400e; line-height: 1.7; margin-top: 10px; }
   .footer { margin-top: 40px; font-size: 11px; color: #bbb; text-align: center; }
 </style>
@@ -46,9 +51,15 @@
     <div class="group-title">광고 관련</div>
     <div class="card">
 
-      <!-- 통합 -->
       <div class="row">
-        <div class="row-name">멀티채널 광고 성과 통합 <span class="row-sub">29CM · 메타 · 무신사 · 네이버 · 카카오</span></div>
+        <div class="row-name">
+          멀티채널 광고 성과 통합
+          <span class="row-sub">29CM · 메타 · 무신사 · 네이버 · 카카오</span>
+          <div style="margin-top:6px;">
+            <span class="time-chip"><span class="time-old">1시간</span><span class="time-arrow">→</span><span class="time-new">20분</span></span>
+          </div>
+          <div style="font-size:11px;color:#aaa;margin-top:5px;">메타(자사·29CM·무신사) · 네이버(자사) · 성장솔루션(29CM·무신사) 데이터 수동 입력 → 추출기 자동화</div>
+        </div>
         <div class="row-links">
           <a class="link-btn" href="https://docs.google.com/spreadsheets/d/1bN9__UoCUlxDfAaeiWYjd76Q2WuoAaVW33Pj2XlopJA/edit?gid=671396489#gid=671396489" target="_blank">Sheets →</a>
           <a class="link-btn" href="https://psaae01.github.io/levar-figma-tool/" target="_blank">GitHub →</a>
@@ -57,36 +68,34 @@
         <span class="badge done">완료</span>
       </div>
 
-      <!-- 29CM -->
       <div class="sub-label">29CM</div>
       <div class="row">
         <div class="row-name">주별 보고서</div>
         <div class="row-links">
-          <button class="dl-btn" onclick="dl(B64_29CM_REPORT, 'levar_29cm_report_generator.html')">↓ 다운로드</button>
+          <button class="dl-btn" onclick="dl(B64_29CM_REPORT,'levar_29cm_report_generator.html')">↓ 다운로드</button>
         </div>
         <span class="badge done">완료</span>
       </div>
       <div class="row">
         <div class="row-name">이벤트별 보고서</div>
         <div class="row-links">
-          <button class="dl-btn" onclick="dl(B64_29CM_EVENT, 'levar_29cm_event_generator.html')">↓ 다운로드</button>
+          <button class="dl-btn" onclick="dl(B64_29CM_EVENT,'levar_29cm_event_generator.html')">↓ 다운로드</button>
         </div>
         <span class="badge done">완료</span>
       </div>
 
-      <!-- 무신사 -->
       <div class="sub-label">무신사</div>
       <div class="row">
         <div class="row-name">주별 보고서</div>
         <div class="row-links">
-          <button class="dl-btn" onclick="dl(B64_MU_REPORT, 'levar_musinsa_report_generator.html')">↓ 다운로드</button>
+          <button class="dl-btn" onclick="dl(B64_MU_REPORT,'levar_musinsa_report_generator.html')">↓ 다운로드</button>
         </div>
         <span class="badge done">완료</span>
       </div>
       <div class="row">
         <div class="row-name">이벤트별 보고서</div>
         <div class="row-links">
-          <button class="dl-btn" onclick="dl(B64_MU_EVENT, 'levar_musinsa_event_generator.html')">↓ 다운로드</button>
+          <button class="dl-btn" onclick="dl(B64_MU_EVENT,'levar_musinsa_event_generator.html')">↓ 다운로드</button>
         </div>
         <span class="badge done">완료</span>
       </div>
@@ -98,8 +107,15 @@
   <div class="group">
     <div class="group-title">시즌 업데이트 관련</div>
     <div class="card">
+
+      <div class="sub-label">피그마 데이터 추출</div>
       <div class="row">
-        <div class="row-name">피그마 데이터 추출 <span class="row-sub">기본</span></div>
+        <div class="row-name">
+          상품기술서 추출
+          <div style="margin-top:6px;">
+            <span class="time-chip"><span class="time-old">3~4시간</span><span class="time-arrow">→</span><span class="time-new">30분</span></span>
+          </div>
+        </div>
         <div class="row-links">
           <a class="link-btn" href="https://psaae01.github.io/levar-figma-tool/" target="_blank">GitHub →</a>
           <a class="link-btn" href="https://docs.google.com/spreadsheets/d/1MqGkWZ7jhSj3JvneBuCkEEvDw66Q40UP0Fn8MFIlI2c/edit?gid=86563582#gid=86563582" target="_blank">Sheets →</a>
@@ -108,27 +124,55 @@
         <span class="badge done">완료</span>
       </div>
       <div class="row">
-        <div class="row-name">피그마 데이터 추출 <span class="row-sub">캐리오버 · 전상품 구간</span></div>
+        <div class="row-name">
+          컬러칩 추출
+          <div style="margin-top:6px;">
+            <span class="time-chip" style="background:#f5f0ff;"><span style="color:#aaa;">3시간</span></span>
+          </div>
+        </div>
         <div class="row-links"></div>
-        <span class="badge wip">진행 중</span>
+        <span class="badge plan">개발 예정</span>
       </div>
       <div class="row">
-        <div class="row-name">사이즈 태그 추출기 <span class="row-sub">levar_size_tag_generator.html</span></div>
+        <div class="row-name">
+          착용모델 추출
+          <div style="margin-top:6px;">
+            <span class="time-chip" style="background:#f5f0ff;"><span style="color:#aaa;">2시간</span></span>
+          </div>
+        </div>
+        <div class="row-links"></div>
+        <span class="badge plan">개발 예정</span>
+      </div>
+
+      <div class="sub-label">MD 전용 도구</div>
+      <div class="row">
+        <div class="row-name">
+          사이즈 태그 추출기
+          <div style="margin-top:6px;">
+            <span class="time-chip"><span class="time-old">2시간 · 1명</span><span class="time-arrow">→</span><span class="time-new">30분 · 1명</span></span>
+          </div>
+        </div>
         <div class="row-links">
-          <button class="dl-btn" onclick="dl(B64_SIZE, 'levar_size_tag_generator.html')">↓ 다운로드</button>
+          <button class="dl-btn" onclick="dl(B64_SIZE,'levar_size_tag_generator.html')">↓ 다운로드</button>
         </div>
         <span class="badge done">완료</span>
       </div>
       <div class="row">
-        <div class="row-name">FTP 이미지 태그 추출기 <span class="row-sub">levar_ftp_tag_generator.html</span></div>
+        <div class="row-name">
+          FTP 이미지 태그 추출기
+          <div style="margin-top:6px;">
+            <span class="time-chip"><span class="time-old">1시간 · 2명</span><span class="time-arrow">→</span><span class="time-new">40분 · 1명</span></span>
+          </div>
+        </div>
         <div class="row-links">
-          <button class="dl-btn" onclick="dl(B64_FTP, 'levar_ftp_tag_generator.html')">↓ 다운로드</button>
+          <button class="dl-btn" onclick="dl(B64_FTP,'levar_ftp_tag_generator.html')">↓ 다운로드</button>
         </div>
         <span class="badge done">완료</span>
       </div>
+
     </div>
     <div class="notice">
-      피그마 기본 추출은 정상 작동합니다. 캐리오버 / 전상품 구간 분리는 현재 데이터 취합 후 분류 작업을 진행 중입니다.
+      피그마 기본 추출은 정상 작동합니다. 캐리오버 / 전상품 구간 분리 및 컬러칩·착용모델 추출은 현재 개발 진행 중입니다.
     </div>
   </div>
 
